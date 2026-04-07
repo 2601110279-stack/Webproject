@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+    table {
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 10px;
+        text-align: center;
+        border: 3px outset black;
+    }
+    </style>
+</head>
+<body>
+            <fieldset>
+            <legend>개인 정보 입력</legend>
+            <table border="1">
+         <tr>
+            <td><label for="name"> 성명 : </label><input type="text" id="name" name="name"><br><br></td>
+        </tr>
+        <tr>
+            <td><label for="email"> 이메일 : </label><input type="email" id="email" name="email"><br><br></td>
+        </tr>
+        <tr>
+            <td><label for="address"> 주소 : </label><input type="text" id="address" name="address"><br><br></td>
+        </tr>
+        <tr>
+            <td> 성별 : <input type="radio" name="gender" value="남성">남성 &nbsp;&nbsp;
+                   <input type="radio" name="gender" value="여성">여성<br><br></td>
+        </tr>
+        <tr>
+            <td> 남기고 싶은 말 : </td>
+            <td>
+            <textarea name="message" cols="30" rows="5">기타 하고 싶은 말이 있으면 여기에 입력하세요.</textarea>
+            </td>
+        </tr>
+        <input type="submit" value="가입하기"> &nbsp;&nbsp;
+        <input type="reset" value="입력초기화">
+        </table>
+        </fieldset> 
+</body>
+</html>
