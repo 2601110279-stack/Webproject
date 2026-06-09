@@ -12,11 +12,45 @@
         function addStar(btn){
             btn.textContent += '⭐';
         }
+        
+        function overChange(btn){
+            btn.style.backgroundColor = "magenta";
+            btn.style.color = "white";
+        }
+
+        function outChange(btn){
+            btn.style.backgroundColor = "lightgray";
+            btn.style.color = "black";
+        }
+
+        let count = 1;
+        function changeImg(img){
+            count++;
+            if(count == 5){
+                count = 1;
+            }
+            img.src = "imgs/img0" + count + ".png";
+        }
+ 
+        function showImageslide(){
+            let img2 = document.getElementById("img2");
+             setInterval(function(){
+                count++;
+                if(count == 5){
+                    count = 1;
+                }
+                img2.src = "imgs/img0" + count + ".png";
+            }, 2000);
+        }
     </script>
 </head>
-<body>
+<body onload="showImageslide()">
     <button onclick="alert('인라인 이벤트 모델 1')">인라인 이벤트 모델 1</button><br><br>
     <button onclick="greet()">인라인 이벤트 모델 2</button><br><br>
-    <button onclick="addStar(this)">별 추가</button>
-</body>
+    <button onclick="addStar(this)">별 추가</button><br><br>
+    <button onmouseover="overChange(this)" onmouseout="outChange(this)">마우스 올리기</button><br><br>
+    <img src="imgs/img01.png" width="400" height="300" onclick="changeImg(this)" style="cursor: pointer;"><br><br>
+    <img src="imgs/img01.png" width="400" height="300" id="img2">
+
+    
 </html>
