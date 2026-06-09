@@ -4,26 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- jQuery library 설정-->
     <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
-    <!-- jQuery 문법으로 코드 작성 -->
     <script>
-        $(document).ready(function(){
-            $("#second").css("color", "magenta");
-            $("#second").css("background", "black");
-            $(".third").css("color", "white");
-            $(".third").css("background", "magenta");
+        $(document).ready
+            (function(){
             let srcPath = $("#img1").attr("src");
             $("#h2").text(srcPath);
             $("#h2").css("color", "white");
             $("#h2").css("background", "black");
+            $("#h2").css("width", "200px");
         });
     </script>
 </head>
 <body>
-    <h1>jQuery 라이브러리 설정 및 문법</h1>
-    <h1 id="second">jQuery 라이브러리 설정 및 문법</h1>
-    <h1 class="third">jQuery 라이브러리 설정 및 문법</h1>
     <img src="imgs/img01.png" width="400" height="300" id="img1"><br><br>
     <h2 id="h2"></h2>
 </body>
