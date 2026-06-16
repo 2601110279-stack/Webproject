@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.js"></script>
+    <script>
+       $(document).ready(
+        function(){
+            $("#btn_fadetoggle").click(
+                function(){
+                    $(".page").fadeToggle(2000);
+                }
+            );
+            $("#btn_toggle").click(
+                function(){
+                    $(".page").toggle();
+                }
+            );
+            $("#btn_slidetoggle").click(
+                function(){
+                    $(".page").slideToggle(2000);
+                }
+            );
+        }
+       );
+    </script>
+</head>
+<body>
+    <button id="btn_fadetoggle">Show Fade Toggle</button>&nbsp;
+    <button id="btn_toggle">Show toggle Toggle</button>&nbsp;
+    <button id="btn_slidetoggle">Show slide Toggle</button>&nbsp;
+
+    <div class="page">
+        <h1>jQuery Fade Toggle</h1>
+        <p>
+            Lorem ipsum dolor sit ame consectetur adipisicing elit. Voluptas, voluptate.
+            Lorem ipsum dolor sit ame consectetur adipisicing elit. Voluptas, voluptate.
+            Lorem ipsum dolor sit ame consectetur adipisicing elit. Voluptas, voluptate.
+            Lorem ipsum dolor sit ame consectetur adipisicing elit. Voluptas, voluptate.
+            Lorem ipsum dolor sit ame consectetur adipisicing elit. Voluptas, voluptate.
+            Lorem ipsum dolor sit ame consectetur adipisicing elit. Voluptas, voluptate.
+            Lorem ipsum dolor sit ame consectetur adipisicing elit. Voluptas, voluptate.
+            Lorem ipsum dolor sit ame consectetur adipisicing elit. Voluptas, voluptate.
+        </p>
+    </div>
+</body>
+</html>
